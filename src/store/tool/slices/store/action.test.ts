@@ -1,4 +1,4 @@
-import { LobeChatPluginManifest, LobeChatPluginMeta } from '@lobehub/chat-plugin-sdk';
+import { lobeChatPluginManifest, lobeChatPluginMeta } from '@lobehub/chat-plugin-sdk';
 import { act, renderHook } from '@testing-library/react';
 import { notification } from 'antd';
 import useSWR from 'swr';
@@ -78,7 +78,7 @@ beforeEach(() => {
         meta: { title: 'plugin1', avatar: '🍏' },
         manifest: 'https://abc.com/manifest.json',
         schemaVersion: 1,
-      } as LobeChatPluginMeta,
+      } as lobeChatPluginMeta,
     ],
   });
   console.error = () => {};
@@ -258,7 +258,7 @@ describe('useToolStore:pluginStore', () => {
           {
             identifier: 'plugin1',
             meta: { title: 'plugin1', avatar: '🍏' },
-          } as LobeChatPluginMeta,
+          } as lobeChatPluginMeta,
         ],
       });
 
@@ -283,12 +283,12 @@ describe('useToolStore:pluginStore', () => {
               identifier: 'plugin1',
               meta: { title: 'plugin1', avatar: '🍏' },
               manifest: 'https://abc.com/manifest.json',
-            } as LobeChatPluginMeta,
+            } as lobeChatPluginMeta,
             {
               identifier: 'plugin2',
               meta: { title: 'plugin2', avatar: '🍏' },
               manifest: 'https://abc.com/manifest.json',
-            } as LobeChatPluginMeta,
+            } as lobeChatPluginMeta,
           ],
         });
       });
@@ -319,7 +319,7 @@ describe('useToolStore:pluginStore', () => {
               manifest: {
                 identifier: pluginIdentifier,
                 meta: {},
-              } as LobeChatPluginManifest,
+              } as lobeChatPluginManifest,
             },
           ],
         });

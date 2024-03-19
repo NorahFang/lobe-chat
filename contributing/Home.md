@@ -6,7 +6,7 @@
 
 <h1>Lobe Chat Contributing Wiki</h1>
 
-LobeChat is an open-source, extensible ([Function Calling][fc-url]), high-performance chatbot framework. <br/> It supports one-click free deployment of your private ChatGPT/LLM web application.
+云智助手 is an open-source, extensible ([Function Calling][fc-url]), high-performance chatbot framework. <br/> It supports one-click free deployment of your private ChatGPT/LLM web application.
 
 [Usage Documents](https://chat-docs.lobehub.com/en) | [使用指南](https://chat-docs.lobehub.com/zh)
 
@@ -20,7 +20,7 @@ LobeChat is an open-source, extensible ([Function Calling][fc-url]), high-perfor
 
 - [Architecture Design](https://github.com/lobehub/lobe-chat/wiki/Architecture) | [架构设计](https://github.com/lobehub/lobe-chat/wiki/Architecture.zh-CN)
 - [Code Style and Contribution Guidelines](https://github.com/lobehub/lobe-chat/wiki/Contributing-Guidelines) | [代码风格与贡献指南](https://github.com/lobehub/lobe-chat/wiki/Contributing-Guidelines.zh-CN)
-- [Complete Guide to LobeChat Feature Development](https://github.com/lobehub/lobe-chat/wiki/Feature-Development) | [LobeChat 功能开发完全指南](https://github.com/lobehub/lobe-chat/wiki/Feature-Development.zh-CN)
+- [Complete Guide to 云智助手 Feature Development](https://github.com/lobehub/lobe-chat/wiki/Feature-Development) | [云智助手 功能开发完全指南](https://github.com/lobehub/lobe-chat/wiki/Feature-Development.zh-CN)
 - [Conversation API Implementation Logic](https://github.com/lobehub/lobe-chat/wiki/Chat-API) | [会话 API 实现逻辑](https://github.com/lobehub/lobe-chat/wiki/Chat-API.zh-CN)
 - [Directory Structure](https://github.com/lobehub/lobe-chat/wiki/Folder-Structure) | [目录架构](https://github.com/lobehub/lobe-chat/wiki/Folder-Structure.zh-CN)
 - [Environment Setup Guide](https://github.com/lobehub/lobe-chat/wiki/Setup-Development) | [环境设置指南](https://github.com/lobehub/lobe-chat/wiki/Setup-Development.zh-CN)

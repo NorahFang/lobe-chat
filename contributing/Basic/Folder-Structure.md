@@ -1,6 +1,6 @@
 # Directory Structure
 
-The directory structure of LobeChat is as follows:
+The directory structure of 云智助手 is as follows:
 
 ```bash
 src

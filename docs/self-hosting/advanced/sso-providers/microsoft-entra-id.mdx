@@ -34,15 +34,15 @@
 
   ### Add Users
 
-  Go back to the "Microsoft Entra ID" interface, enter "Users", click on "New user", fill in the user information, and click on "Create" to create a user for using LobeChat.
+  Go back to the "Microsoft Entra ID" interface, enter "Users", click on "New user", fill in the user information, and click on "Create" to create a user for using 云智助手.
 
   ### Configure Environment Variables
 
-  When deploying LobeChat, you need to configure the following environment variables:
+  When deploying 云智助手, you need to configure the following environment variables:
 
   | Environment Variable     | Type     | Description                                                                                                                                                                                                                |
   | ------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | `ENABLE_OAUTH_SSO`       | Required | Enable single sign-on (SSO) for LobeChat. Set to `1` to enable single sign-on.                                                                                                                                             |
+  | `ENABLE_OAUTH_SSO`       | Required | Enable single sign-on (SSO) for 云智助手. Set to `1` to enable single sign-on.                                                                                                                                             |
   | `NEXTAUTH_SECRET`        | Required | Key used to encrypt Auth.js session tokens. You can generate the key using the following command: `openssl rand -base64 32`                                                                                                |
   | `SSO_PROVIDERS`          | Required | Select the single sign-on provider for LoboChat. Use `azure-ad` for Microsoft Entra ID.                                                                                                                                    |
   | `AZURE_AD_CLIENT_ID`     | Required | Client ID of the Microsoft Entra ID application.                                                                                                                                                                           |
@@ -57,7 +57,7 @@
 
 </Steps>
 
-<Callout>After successful deployment, users will be able to authenticate and use LobeChat using the users configured in Microsoft Entra ID.</Callout>
+<Callout>After successful deployment, users will be able to authenticate and use 云智助手 using the users configured in Microsoft Entra ID.</Callout>
 
 ## Advanced Configuration
 

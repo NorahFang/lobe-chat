@@ -26,7 +26,7 @@ const ExtraList = memo<ExtraListProps>(({ activeTab }) => {
       onClick: configService.exportAll,
       value: 'export',
     },
-    {
+   /*  {
       icon: Feather,
       label: t('feedback'),
       onClick: () => window.open(FEEDBACK, '__blank'),
@@ -37,7 +37,7 @@ const ExtraList = memo<ExtraListProps>(({ activeTab }) => {
       label: t('changelog'),
       onClick: () => window.open(CHANGELOG, '__blank'),
       value: 'changelog',
-    },
+    }, */
   ];
 
   return (

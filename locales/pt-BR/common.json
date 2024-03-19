@@ -13,7 +13,7 @@
   "agentMaxToken": "Máximo de tokens da sessão",
   "agentModel": "Modelo",
   "agentProfile": "Perfil do assistente",
-  "appInitializing": "LobeChat inicializando, por favor aguarde...",
+  "appInitializing": "YunZhi inicializando, por favor aguarde...",
   "archive": "Arquivar",
   "autoGenerate": "Auto completar",
   "autoGenerateTooltip": "Auto completar descrição do assistente com base em sugestões",
@@ -136,9 +136,9 @@
   "telemetry": {
     "allow": "Permitir",
     "deny": "Negar",
-    "desc": "Queremos coletar anonimamente suas informações de uso para nos ajudar a melhorar o LobeChat e oferecer uma experiência de produto melhor para você. Você pode desativar a qualquer momento em Configurações - Sobre.",
+    "desc": "Queremos coletar anonimamente suas informações de uso para nos ajudar a melhorar o YunZhi e oferecer uma experiência de produto melhor para você. Você pode desativar a qualquer momento em Configurações - Sobre.",
     "learnMore": "Saiba mais",
-    "title": "Ajude o LobeChat a melhorar"
+    "title": "Ajude o YunZhi a melhorar"
   },
   "temp": "Temporário",
   "updateAgent": "Atualizar informações do assistente",

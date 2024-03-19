@@ -1,6 +1,6 @@
 import {
-  LobeChatPluginManifest,
-  LobeChatPluginsMarketIndex,
+  lobeChatPluginManifest,
+  lobeChatPluginsMarketIndex,
   pluginManifestSchema,
 } from '@lobehub/chat-plugin-sdk';
 
@@ -14,7 +14,7 @@ import { API_ENDPOINTS } from './_url';
 
 export interface InstallPluginParams {
   identifier: string;
-  manifest: LobeChatPluginManifest;
+  manifest: lobeChatPluginManifest;
   type: 'plugin' | 'customPlugin';
 }
 class PluginService {
@@ -52,7 +52,7 @@ class PluginService {
   /**
    * get plugin list from store
    */
-  getPluginList = async (): Promise<LobeChatPluginsMarketIndex> => {
+  getPluginList = async (): Promise<lobeChatPluginsMarketIndex> => {
     const locale = globalHelpers.getCurrentLanguage();
 
     const res = await fetch(`${API_ENDPOINTS.pluginStore}?locale=${locale}`);
@@ -63,7 +63,7 @@ class PluginService {
   getPluginManifest = async (
     url?: string,
     useProxy: boolean = false,
-  ): Promise<LobeChatPluginManifest> => {
+  ): Promise<lobeChatPluginManifest> => {
     // 1. valid plugin
     if (!url) {
       throw new TypeError('noManifest');
@@ -71,7 +71,7 @@ class PluginService {
 
     // 2. 发送请求
 
-    let data = await this._fetchJSON<LobeChatPluginManifest>(url, useProxy);
+    let data = await this._fetchJSON<lobeChatPluginManifest>(url, useProxy);
 
     // @ts-ignore
     // if there is a description_for_model, it is an OpenAI plugin
@@ -126,7 +126,7 @@ class PluginService {
   async updatePlugin(id: string, value: LobeToolCustomPlugin) {
     return PluginModel.update(id, value);
   }
-  async updatePluginManifest(id: string, manifest: LobeChatPluginManifest) {
+  async updatePluginManifest(id: string, manifest: lobeChatPluginManifest) {
     return PluginModel.update(id, { manifest });
   }
 
@@ -140,8 +140,8 @@ class PluginService {
 
   private convertOpenAIManifestToLobeManifest = (
     data: OpenAIPluginManifest,
-  ): LobeChatPluginManifest => {
-    const manifest: LobeChatPluginManifest = {
+  ): lobeChatPluginManifest => {
+    const manifest: lobeChatPluginManifest = {
       api: [],
       homepage: data.legal_info_url,
       identifier: data.name_for_model,

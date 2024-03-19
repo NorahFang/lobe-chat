@@ -12,7 +12,7 @@ const AboutList = memo(() => {
   const { t } = useTranslation('setting');
   const { styles } = useStyles();
   const items = [
-    {
+   /*  {
       icon: Feather,
       label: t('feedback', { ns: 'common' }),
       onClick: () => window.open(FEEDBACK, '__blank'),
@@ -29,7 +29,7 @@ const AboutList = memo(() => {
       label: t('about', { ns: 'common' }),
       onClick: () => window.open(ABOUT, '__blank'),
       value: 'about',
-    },
+    }, */
   ];
 
   return (
