@@ -65,7 +65,7 @@ const Theme = memo(() => {
         ),
         label: t('settingTheme.themeMode.title'),
         minWidth: undefined,
-      },
+      }, 
       {
         children: (
           <Select
@@ -117,12 +117,12 @@ const Theme = memo(() => {
         label: t('settingTheme.primaryColor.title'),
         minWidth: undefined,
       },
-      {
+      /* {
         children: <ThemeSwatchesNeutral />,
         desc: t('settingTheme.neutralColor.desc'),
         label: t('settingTheme.neutralColor.title'),
         minWidth: undefined,
-      },
+      }, */
     ],
     icon: Palette,
     title: t('settingTheme.title'),

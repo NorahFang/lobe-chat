@@ -188,14 +188,21 @@ const AgentConfig = memo(() => {
     enableCompressThreshold,
   ]);
 
-  return (
-    <Form
+ /*  return (
+     <Form
       form={form}
       items={formItems}
       onValuesChange={debounce(updateConfig, 100)}
       {...FORM_STYLE}
-    />
-  );
+    /> 
+  ); */
+  return (
+    <Form
+     form={form}
+     onValuesChange={debounce(updateConfig, 100)}
+     {...FORM_STYLE}
+   /> 
+ );
 });
 
 export default AgentConfig;

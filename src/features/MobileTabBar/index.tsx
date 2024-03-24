@@ -28,6 +28,14 @@ export default memo<Props>(({ className, tabBarKey }) => {
   const items: MobileTabBarProps['items'] = useMemo(
     () => [
       {
+        icon: (active) => <Icon className={active ? styles.active : undefined} icon={Bot} />,
+        key: SidebarTabKey.Market,
+        onClick: () => {
+          router.push('/market');
+        },
+        title: t('tab.market'),
+      },
+      {
         icon: (active) => (
           <Icon className={active ? styles.active : undefined} icon={MessageSquare} />
         ),
@@ -37,14 +45,7 @@ export default memo<Props>(({ className, tabBarKey }) => {
         },
         title: t('tab.chat'),
       },
-      {
-        icon: (active) => <Icon className={active ? styles.active : undefined} icon={Bot} />,
-        key: SidebarTabKey.Market,
-        onClick: () => {
-          router.push('/market');
-        },
-        title: t('tab.market'),
-      },
+      
       {
         icon: (active) => <Icon className={active ? styles.active : undefined} icon={User} />,
         key: SidebarTabKey.Setting,
@@ -56,6 +57,5 @@ export default memo<Props>(({ className, tabBarKey }) => {
     ],
     [t],
   );
-
   return <MobileTabBar activeKey={tabBarKey} className={className} items={items} safeArea />;
 });

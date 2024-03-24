@@ -18,6 +18,15 @@ const TopActions = memo<TopActionProps>(({ tab }) => {
 
   return (
     <>
+      <Link aria-label={t('tab.market')} href={'/market'}>
+        <ActionIcon
+          active={tab === SidebarTabKey.Market}
+          icon={Compass}
+          placement={'right'}
+          size="large"
+          title={t('tab.market')}
+        />
+      </Link>
       <Link
         aria-label={t('tab.chat')}
         href={'/chat'}
@@ -32,15 +41,6 @@ const TopActions = memo<TopActionProps>(({ tab }) => {
           placement={'right'}
           size="large"
           title={t('tab.chat')}
-        />
-      </Link>
-      <Link aria-label={t('tab.market')} href={'/market'}>
-        <ActionIcon
-          active={tab === SidebarTabKey.Market}
-          icon={Compass}
-          placement={'right'}
-          size="large"
-          title={t('tab.market')}
         />
       </Link>
     </>

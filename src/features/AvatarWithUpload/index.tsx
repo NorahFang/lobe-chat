@@ -56,11 +56,18 @@ const AvatarWithUpload = memo<AvatarWithUploadProps>(
       <div className={styles} id={id} style={{ maxHeight: size, maxWidth: size, ...style }}>
         <Upload beforeUpload={handleUploadAvatar} itemRender={() => void 0} maxCount={1}>
           <Avatar
+            alt={avatar ? 'userAvatar' : 'YunZhi'}
+            height={size}
+            src={!!avatar ? avatar : ' https://uppic-1257958181.cos.ap-nanjing.myqcloud.com/UtoolsCompany/2024320/yunzhiLogo.webp'}
+            width={size}
+          />
+          {/* <Avatar
             alt={avatar ? 'userAvatar' : 'LobeChat'}
             height={size}
             src={!!avatar ? avatar : imageUrl('logo.png')}
             width={size}
-          />
+          /> */}
+         
         </Upload>
       </div>
     );

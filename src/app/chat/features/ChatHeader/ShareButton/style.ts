@@ -23,6 +23,10 @@ export const useStyles = createStyles(({ css, token, stylish, cx }, withBackgrou
       background: ${token.colorBgLayout};
     `,
   ),
+  logo: css`
+  color: ${token.colorText};
+  fill: ${token.colorText};
+`,
   footer: css`
     padding: 16px;
     border-top: 1px solid ${token.colorBorder};

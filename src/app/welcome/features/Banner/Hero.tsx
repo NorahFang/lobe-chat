@@ -1,12 +1,10 @@
-import dynamic from 'next/dynamic';
+
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
+import { Logo } from '@lobehub/ui';
 
 import { genSize, useStyles } from './style';
-
-const LogoThree = dynamic(() => import('@lobehub/ui/es/LogoThree'));
-const LogoSpline = dynamic(() => import('@lobehub/ui/es/LogoThree/LogoSpline'));
 
 const Hero = memo<{ mobile?: boolean; width: number }>(({ width, mobile }) => {
   const size: any = {
@@ -17,7 +15,7 @@ const Hero = memo<{ mobile?: boolean; width: number }>(({ width, mobile }) => {
   };
 
   size.marginTop = mobile ? -size.logo / 9 : -size.logo / 3;
-  size.marginBottom = mobile ? -size.logo / 9 : -size.logo / 4;
+  size.marginBottom = mobile ? size.logo / 9 : size.logo / 4;
 
   const { styles } = useStyles(size.base);
 
@@ -27,22 +25,22 @@ const Hero = memo<{ mobile?: boolean; width: number }>(({ width, mobile }) => {
     <>
       <Flexbox
         style={{
-          height: size.logo,
-          marginBottom: size.marginBottom,
-          marginTop: size.marginTop,
-          position: 'relative',
+          height: size.mainlogo,
         }}
       >
-        {mobile ? <LogoThree size={size.logo} /> : <LogoSpline height={'100%'} width={'100%'} />}
+         <div className={styles.mainlogo} style={mobile ? { display: 'none' }: {} } >
+            <Logo  size={40} type={'combine'} className={styles.logo}/>
+          </div>
       </Flexbox>
       <div className={styles.title} style={{ fontSize: size.title }}>
-        <strong style={mobile ? { fontSize: '1.2em' } : {}}>LobeChat</strong>
+        <strong style={mobile ? { fontSize: '1.2em' } : {}}>云智助手</strong>
         {mobile ? <br /> : ' '}
         {t('slogan.title')}
       </div>
-      <div className={styles.desc} style={{ fontSize: size.desc }}>
-        {t('slogan.desc1')}
-      </div>
+
+
+      
+      
     </>
   );
 });

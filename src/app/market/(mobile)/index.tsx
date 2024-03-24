@@ -2,7 +2,7 @@
 
 import { memo } from 'react';
 
-import AgentCard from '@/app/market/features/AgentCard';
+import Card from '@/app/market/features/Card';
 
 import Index from '../index';
 import CardRender from './features/AgentCard';
@@ -11,6 +11,6 @@ import Layout from './layout.mobile';
 export default memo(() => (
   <Layout>
     <Index />
-    <AgentCard CardRender={CardRender} mobile />
+    <Card CardRender={CardRender} mobile />
   </Layout>
 ));

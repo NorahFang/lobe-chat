@@ -57,7 +57,7 @@ export class BaseModel<N extends keyof LocalDBSchema = any, T = LocalDBSchema[N]
     };
 
     const newId = await this.db[tableName].add(record);
-
+    
     // sync data to yjs data map
     this.updateYMapItem(newId);
 

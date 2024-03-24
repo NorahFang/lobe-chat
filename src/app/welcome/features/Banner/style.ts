@@ -18,7 +18,20 @@ export const useStyles = createStyles(({ css, token, stylish, cx, prefixCls }) =
       width: 100%;
       margin-bottom: 24px;
     `,
+    formBox: css`
+    z-index: 10;
+    width:400px;
+    max-width:90%;
+    padding: 40px;
+    border:2px solid #f5f5f5;
+    border-radius:20px;
+    box-shadow: 0 0 30px rgba(150,150,150,0.1);
+  `,
+  primaryBtn: css`
+  width: 100%
+`,
     desc: css`
+      margin-bottom:10px;
       font-weight: 400;
       color: ${rgba(token.colorText, 0.8)};
       text-align: center;
@@ -27,11 +40,11 @@ export const useStyles = createStyles(({ css, token, stylish, cx, prefixCls }) =
       background: ${token.colorBgContainer};
     `,
     logo: css`
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      fill: ${token.colorText};
+      // fill: ${token.colorText};
     `,
+    mainlogo: css`
+    margin:20px auto;
+  `,
     note: css`
       z-index: 10;
       margin-top: 16px;
@@ -51,6 +64,14 @@ export const useStyles = createStyles(({ css, token, stylish, cx, prefixCls }) =
       line-height: 1.4;
       text-align: center;
     `,
+
+    loginHd: css`
+      margin-bottom: 0.85em;
+      font-weight: 800;
+      line-height: 1.4;
+      font-size:2em;
+      text-align: center;
+    `,
     view: cx(
       stylish.noScrollbar,
       css`
@@ -58,8 +79,7 @@ export const useStyles = createStyles(({ css, token, stylish, cx, prefixCls }) =
 
         overflow: hidden auto;
 
-        max-width: 1024px;
-        height: 100%;
+        max-width: 80%;
         padding: 32px 16px;
       `,
     ),

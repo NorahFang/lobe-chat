@@ -19,7 +19,7 @@ export default memo(() => (
   <ResponsiveContainer Mobile={Mobile}>
     <Layout>
       <Showcase />
-      <Footer />
     </Layout>
+    <Footer />
   </ResponsiveContainer>
 ));

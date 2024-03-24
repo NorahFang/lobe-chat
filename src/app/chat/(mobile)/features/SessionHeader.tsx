@@ -25,6 +25,7 @@ const Header = memo(() => {
   const [createSession] = useSessionStore((s) => [s.createSession]);
   const router = useRouter();
   const avatar = useGlobalStore(commonSelectors.userAvatar);
+  const { styles } = useStyles();
   return (
     <MobileNavBar
       left={

@@ -3,10 +3,11 @@ import { Metadata } from 'next';
 import { getClientConfig } from '@/config/client';
 import { getServerConfig } from '@/config/server';
 import { OFFICIAL_URL } from '@/const/url';
+import { imageUrl } from '@/const/url';
 
 import pkg from '../../package.json';
 
-const title = 'LobeChat';
+const title = '云智助手';
 const { description, homepage } = pkg;
 
 const { SITE_URL = OFFICIAL_URL } = getServerConfig();
@@ -22,11 +23,9 @@ const metadata: Metadata = {
   },
   description,
   icons: {
-    apple:
-      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/apple-touch-icon.png',
-    icon: 'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/favicon-32x32.png',
-    shortcut:
-      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/favicon.ico',
+    apple:imageUrl('apple-touch-icon.png'),
+    icon: imageUrl('favicon-32x32.png'),
+    shortcut: imageUrl('favicon.ico'),
   },
   manifest: noManifest ? undefined : '/manifest.json',
   metadataBase: new URL(SITE_URL),
@@ -36,13 +35,13 @@ const metadata: Metadata = {
       {
         alt: title,
         height: 360,
-        url: 'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/og-480x270.png',
+        url: imageUrl('og-480x270.png'),
         width: 480,
       },
       {
         alt: title,
         height: 720,
-        url: 'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/og-960x540.png',
+        url: imageUrl('og-960x540.png'),
         width: 960,
       },
     ],
@@ -55,16 +54,7 @@ const metadata: Metadata = {
 
   title: {
     default: title,
-    template: '%s · LobeChat',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    description,
-    images: [
-      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/og-960x540.png',
-    ],
-    site: '@lobehub',
-    title,
+    template: '%s · 云智助手',
   },
 };
 

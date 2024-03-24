@@ -18,6 +18,7 @@ const Header = memo<HeaderProps>(({ activeTab }) => {
 
   return (
     <MobileNavBar
+      // center={<MobileNavBarTitle title={t(`tab.${activeTab}`)} />}
       center={
         <MobileNavBarTitle
           title={

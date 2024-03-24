@@ -227,7 +227,7 @@ class _SessionModel extends BaseModel {
   async batchDelete(ids: string[]) {
     return this._bulkDeleteWithSync(ids);
   }
-
+  
   async clearTable() {
     return this._clearWithSync();
   }

@@ -45,7 +45,7 @@
     "zhipu": { "ZHIPU_API_KEY": "", "enabled": false }
   },
   "password": "",
-  "themeMode": "auto",
+  "themeMode": "light",
   "tool": { "dalle": { "autoGenerate": false } },
   "tts": {
     "openAI": { "sttModel": "whisper-1", "ttsModel": "tts-1" },

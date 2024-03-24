@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import PageTitle from '@/components/PageTitle';
 import { useMarketStore } from '@/store/market';
 
-import AgentSearchBar from './features/AgentSearchBar';
+//import AgentSearchBar from './features/AgentSearchBar';
 
 const Market = memo(() => {
   const { t } = useTranslation('common');
@@ -19,7 +19,7 @@ const Market = memo(() => {
   return (
     <>
       <PageTitle title={t('tab.market')} />
-      <AgentSearchBar />
+      {/* <AgentSearchBar /> */}
     </>
   );
 });

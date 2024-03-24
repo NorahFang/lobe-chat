@@ -29,7 +29,7 @@ const AboutList = memo(() => {
       label: t('about', { ns: 'common' }),
       onClick: () => window.open(ABOUT, '__blank'),
       value: 'about',
-    },
+    }, 
   ];
 
   return (
@@ -38,13 +38,13 @@ const AboutList = memo(() => {
         <Flexbox className={styles.title} gap={8} horizontal>
           {t('about.title')}
         </Flexbox>
-        <Flexbox width={'100%'}>
+        {/* <Flexbox width={'100%'}>
           {items.map(({ value, icon, label, onClick }) => (
             <div key={value} onClick={onClick}>
               <Item active={false} icon={icon} label={label} />
             </div>
           ))}
-        </Flexbox>
+        </Flexbox> */}
       </Flexbox>
     </div>
   );

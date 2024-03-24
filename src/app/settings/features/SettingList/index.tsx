@@ -18,10 +18,10 @@ const SettingList = memo<SettingListProps>(({ activeTab, mobile }) => {
   const items = [
     { icon: Settings2, label: t('tab.common'), value: SettingsTabs.Common },
     { icon: Cloudy, label: t('tab.sync'), value: SettingsTabs.Sync },
-    { icon: Webhook, label: t('tab.llm'), value: SettingsTabs.LLM },
+    // { icon: Webhook, label: t('tab.llm'), value: SettingsTabs.LLM },
     { icon: Mic2, label: t('tab.tts'), value: SettingsTabs.TTS },
     { icon: Bot, label: t('tab.agent'), value: SettingsTabs.Agent },
-    { icon: Info, label: t('tab.about'), value: SettingsTabs.About },
+    // { icon: Info, label: t('tab.about'), value: SettingsTabs.About },
   ];
 
   return items.map(({ value, icon, label }) => (

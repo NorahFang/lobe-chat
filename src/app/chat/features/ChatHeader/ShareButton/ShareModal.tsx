@@ -15,7 +15,7 @@ import { useScreenshot } from './useScreenshot';
 
 enum Tab {
   Screenshot = 'screenshot',
-  ShareGPT = 'sharegpt',
+  // ShareGPT = 'sharegpt',
 }
 
 export const imageTypeOptions: SegmentedProps['options'] = [
@@ -59,10 +59,10 @@ const ShareModal = memo<ModalProps>(({ onCancel, open }) => {
         label: t('shareModal.screenshot'),
         value: Tab.Screenshot,
       },
-      {
+     /*  {
         label: 'ShareGPT',
         value: Tab.ShareGPT,
-      },
+      }, */
     ],
     [],
   );
@@ -99,14 +99,14 @@ const ShareModal = memo<ModalProps>(({ onCancel, open }) => {
         minWidth: undefined,
         name: 'imageType',
       },
-      {
+     /*  {
         children: <Switch />,
         hidden: tab !== Tab.ShareGPT,
         label: t('shareModal.withPluginInfo'),
         minWidth: undefined,
         name: 'withPluginInfo',
         valuePropName: 'checked',
-      },
+      }, */
     ],
     [tab],
   );
@@ -122,7 +122,7 @@ const ShareModal = memo<ModalProps>(({ onCancel, open }) => {
               {t('shareModal.download')}
             </Button>
           )}
-          {tab === Tab.ShareGPT && (
+        {/*   {tab === Tab.ShareGPT && (
             <Button
               block
               loading={shareLoading}
@@ -132,7 +132,7 @@ const ShareModal = memo<ModalProps>(({ onCancel, open }) => {
             >
               {t('shareModal.shareToShareGPT')}
             </Button>
-          )}
+          )} */}
         </>
       }
       maxHeight={false}

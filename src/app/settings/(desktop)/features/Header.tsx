@@ -22,6 +22,7 @@ const Header = memo(({ activeTab }: { activeTab: SettingsTabs }) => {
               </Flexbox>
             }
           />
+          {/* <ChatHeaderTitle title={t(`tab.${activeTab}`)} /> */}
         </div>
       }
     />

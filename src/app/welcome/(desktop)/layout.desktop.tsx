@@ -1,12 +1,12 @@
 'use client';
-
-import { Logo } from '@lobehub/ui';
 import { PropsWithChildren, memo } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
 
-import AppLayoutDesktop from '@/layout/AppLayout.desktop';
+//import { Logo } from '@lobehub/ui';
+import AppLayoutDesktop from '@/layout/welcome/AppLayout.desktop';
 
 import { useStyles } from '../features/Banner/style';
+
 
 const Desktop = memo<PropsWithChildren>(({ children }) => {
   const { styles } = useStyles();
@@ -17,15 +17,19 @@ const Desktop = memo<PropsWithChildren>(({ children }) => {
         flex={1}
         height={'100%'}
         horizontal
-        style={{ position: 'relative' }}
+        style={{ position: 'relative',background:'none' }}
       >
-        <Logo className={styles.logo} size={36} type={'text'} />
+       {/* <div className={styles.logo} >
+       <Logo size={36} type={'combine'} />
+       </div> */}
         <Flexbox className={styles.view} flex={1}>
           {children}
         </Flexbox>
+
       </Center>
     </AppLayoutDesktop>
   );
 });
 
 export default Desktop;
+
