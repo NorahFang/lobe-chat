@@ -485,6 +485,7 @@ export default {
     llm: '语言模型',
     sync: '云端同步',
     tts: '语音服务',
+    user: '个人资料',
   },
   tools: {
     builtins: {
@@ -498,5 +499,8 @@ export default {
       store: '插件商店',
     },
     title: '扩展插件',
+  },
+  user: {
+    title: '个人资料',
   },
 };

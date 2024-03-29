@@ -172,4 +172,5 @@ export default {
     hasNew: '有可用更新',
     newVersion: '有新版本可用：{{version}}',
   },
+  user:'个人资料'
 };

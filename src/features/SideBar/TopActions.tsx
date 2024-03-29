@@ -1,5 +1,5 @@
-import { ActionIcon } from '@lobehub/ui';
-import { Compass, MessageSquare } from 'lucide-react';
+import { ActionIcon} from '@lobehub/ui';
+import { Compass, MessageSquare, User } from 'lucide-react';
 import Link from 'next/link';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -41,6 +41,16 @@ const TopActions = memo<TopActionProps>(({ tab }) => {
           placement={'right'}
           size="large"
           title={t('tab.chat')}
+        />
+      </Link>
+      
+      <Link aria-label={t('tab.setting')} href={'/settings'}>
+        <ActionIcon
+          active={tab === SidebarTabKey.Setting}
+          icon={ User }
+          placement={'right'}
+          size="large"
+          title={t('tab.setting')}
         />
       </Link>
     </>

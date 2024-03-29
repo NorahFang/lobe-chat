@@ -31,7 +31,7 @@ const Header = memo(() => {
       <Flexbox distribution={'space-between'} horizontal>
         <Flexbox align={'center'} gap={4} horizontal>
           <Logo className={styles.logo} size={36} type={'text'} />
-          <SyncStatusTag />
+          {/* <SyncStatusTag /> */}
         </Flexbox>
         <ActionIcon
           icon={MessageSquarePlus}

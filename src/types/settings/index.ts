@@ -6,6 +6,7 @@ import { GlobalBaseSettings } from './base';
 import { GlobalLLMConfig } from './modelProvider';
 import { GlobalSyncSettings } from './sync';
 import { GlobalTTSConfig } from './tts';
+import { GlobalUserConfig } from './user';
 
 export type GlobalDefaultAgent = Pick<LobeAgentSession, 'config' | 'meta'>;
 
@@ -13,6 +14,8 @@ export * from './base';
 export * from './modelProvider';
 export * from './sync';
 export * from './tts';
+export * from './user';
+
 
 export interface GlobalTool {
   dalle: {
@@ -39,4 +42,5 @@ export interface GlobalSettings extends GlobalBaseSettings {
   sync: GlobalSyncSettings;
   tool: GlobalTool;
   tts: GlobalTTSConfig;
+  user:GlobalUserConfig;
 }

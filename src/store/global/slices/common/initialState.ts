@@ -15,6 +15,7 @@ export enum SettingsTabs {
   LLM = 'llm',
   Sync = 'sync',
   TTS = 'tts',
+  User = 'user',
 }
 
 export interface Guide {

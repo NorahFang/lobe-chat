@@ -32,7 +32,7 @@ const SideBar = memo<SettingListProps>(({ activeTab }) => {
         {t('setting')}
       </Flexbox>
       <Flexbox gap={8} style={{ paddingInline: 8 }}>
-        <UpgradeAlert />
+        {/* <UpgradeAlert /> */}
         <SettingList activeTab={activeTab} mobile={mobile} />
       </Flexbox>
     </Flexbox>
