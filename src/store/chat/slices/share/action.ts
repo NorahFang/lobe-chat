@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import { produce } from 'immer';
 import { StateCreator } from 'zustand/vanilla';
 
-import { DEFAULT_USER_AVATAR_URL } from '@/const/meta';
+import { USER_AVATAR_URL } from '@/const/meta';
 import { shareGPTService } from '@/services/share';
 import { useSessionStore } from '@/store/session';
 import { agentSelectors } from '@/store/session/selectors';
@@ -103,7 +103,7 @@ export const chatShare: StateCreator<ChatStore, [['zustand/devtools', never]], [
     set({ shareLoading: true });
 
     const res = await shareGPTService.createShareGPTUrl({
-      avatarUrl: avatar || DEFAULT_USER_AVATAR_URL,
+      avatarUrl: avatar || USER_AVATAR_URL,
       items: shareMsgs,
     });
     set({ shareLoading: false });

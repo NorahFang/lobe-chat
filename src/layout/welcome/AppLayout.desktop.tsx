@@ -9,7 +9,7 @@ import { useIsPWA } from '@/hooks/useIsPWA';
 const useStyles = createStyles(({ css,token}) => ({
   mainBox: css`
   background-size:cover;
-  background-image: url(${imageUrl('loginbg.png')});
+  background-image: url(${imageUrl('loginBg.png')});
 `,
 }));
 

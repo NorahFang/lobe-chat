@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 
-import { DEFAULT_USER_AVATAR_URL } from '@/const/meta';
+import { USER_AVATAR_URL } from '@/const/meta';
 import { shareGPTService } from '@/services/share';
 import { useChatStore } from '@/store/chat';
 
@@ -68,7 +68,7 @@ describe('shareSlice actions', () => {
 
       expect(shareGPTServiceSpy).toHaveBeenCalledWith(
         expect.objectContaining({
-          avatarUrl: DEFAULT_USER_AVATAR_URL,
+          avatarUrl: USER_AVATAR_URL,
         }),
       );
     });

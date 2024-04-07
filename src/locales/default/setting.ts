@@ -202,6 +202,14 @@ export default {
         title: 'API Key',
       },
     },
+    ZeroOne: {
+      title: '01.AI 零一万物',
+      token: {
+        desc: '填入来自 01.AI 零一万物的 API Key',
+        placeholder: '01.AI 零一万物 API Key',
+        title: 'API Key',
+      }
+    },
     Zhipu: {
       title: '智谱',
       token: {
@@ -500,7 +508,55 @@ export default {
     },
     title: '扩展插件',
   },
-  user: {
+  settingUser: {
+    avatar: {
+      title: '头像',
+    },
     title: '个人资料',
+    name: {
+      placeholder: '请输入昵称',
+      title: '昵称',
+    },
+    mobile: {
+      placeholder: '请输入手机号',
+      title: '手机号',
+    },
+    password: {
+      placeholder: '可输入新密码',
+      title: '密码',
+    },
   },
+  UserMember: {
+    title:'会员信息',
+    level: {
+      title: '会员级别',
+      value:'普通会员'
+    },
+    package: {
+      title: '套餐类型',
+      value:''
+    },
+    tokens: {
+      title: 'tokens',
+      desc: '剩余tokens数量',
+      value:''
+    },
+    askGPT3: {
+      title: '询问次数',
+      desc: '剩余询问次数（GPT3.5等）',
+      value:''
+    },
+    askGPT4: {
+      title: '询问次数（GPT4）',
+      desc: '剩余询问次数（GPT4）',
+      value:''
+    },
+  },
+  primary: {
+      action: '立即保存',
+      confirm: '确认立即保存个人资料？',
+      success: '已保存个人资料',
+      title: '',
+  },
+
 };

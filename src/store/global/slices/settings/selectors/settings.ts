@@ -1,6 +1,6 @@
 import { DEFAULT_LANG } from '@/const/locale';
 import { DEFAULT_AGENT_META } from '@/const/meta';
-import { DEFAULT_AGENT, DEFAULT_AGENT_CONFIG, DEFAULT_TTS_CONFIG } from '@/const/settings';
+import { DEFAULT_AGENT, DEFAULT_AGENT_CONFIG, DEFAULT_TTS_CONFIG,USER_CONFIG } from '@/const/settings';
 import { Locales } from '@/locales/resources';
 import { GlobalSettings } from '@/types/settings';
 import { isOnServerSide } from '@/utils/env';
@@ -17,9 +17,15 @@ const currentTTS = (s: GlobalStore) => merge(DEFAULT_TTS_CONFIG, currentSettings
 
 const defaultAgent = (s: GlobalStore) => merge(DEFAULT_AGENT, currentSettings(s).defaultAgent);
 
+
+const User = (s: GlobalStore) => merge(USER_CONFIG, currentSettings(s).user);
+
+
 const defaultAgentConfig = (s: GlobalStore) => merge(DEFAULT_AGENT_CONFIG, defaultAgent(s).config);
 
 const defaultAgentMeta = (s: GlobalStore) => merge(DEFAULT_AGENT_META, defaultAgent(s).meta);
+
+const UserConfig = (s: GlobalStore) => merge(USER_CONFIG, User(s));
 
 // TODO: Maybe we can also export settings difference
 const exportSettings = (s: GlobalStore) => {
@@ -55,4 +61,5 @@ export const settingsSelectors = {
   exportSettings,
   isDalleAutoGenerating,
   password,
+  UserConfig,
 };

@@ -12,9 +12,9 @@ export const createStore = () => createWithEqualityFn(subscribeWithSelector(stor
 
 interface StoreApiWithSelector extends Omit<StoreApi<Store>, 'subscribe'> {
   subscribe: <T extends keyof Store>(
-    selector: (state: Store, prevState: Store) => void,
-    listener?: (state: Store[T]) => void,
+   selector: (state: Store, prevState: Store) => void,
+   listener?: (state: Store[T]) => void,
   ) => () => void;
 }
 
-export const { useStore, useStoreApi, Provider } = createContext<StoreApiWithSelector>();
+export const { useStore, Provider } = createContext<StoreApiWithSelector>();

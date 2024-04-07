@@ -70,6 +70,10 @@ export const getProviderAuthPayload = (provider: string) => {
       return { apiKey: modelProviderSelectors.openrouterAPIKey(useGlobalStore.getState()) };
     }
 
+    case ModelProvider.ZeroOne: {
+      return { apiKey: modelProviderSelectors.zerooneAPIKey(useGlobalStore.getState()) };
+    }
+
     default:
     case ModelProvider.OpenAI: {
       const openai = modelProviderSelectors.openAIConfig(useGlobalStore.getState());

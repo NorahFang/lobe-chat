@@ -8,6 +8,7 @@ import {
   GlobalSettings,
   GlobalSyncSettings,
   GlobalTTSConfig,
+  GlobalUserConfig,
 } from '@/types/settings';
 
 export const DEFAULT_BASE_SETTINGS: GlobalBaseSettings = {
@@ -96,6 +97,10 @@ export const DEFAULT_LLM_CONFIG: GlobalLLMConfig = {
     apiKey: '',
     enabled: false,
   },
+  zeroone: {
+    apiKey: '',
+    enabled: false,
+  },
   zhipu: {
     apiKey: '',
     enabled: false,
@@ -107,6 +112,7 @@ export const DEFAULT_AGENT: GlobalDefaultAgent = {
   meta: DEFAULT_AGENT_META,
 };
 
+
 export const DEFAULT_TTS_CONFIG: GlobalTTSConfig = {
   openAI: {
     sttModel: 'whisper-1',
@@ -116,21 +122,26 @@ export const DEFAULT_TTS_CONFIG: GlobalTTSConfig = {
   sttServer: 'openai',
 };
 
+
 export const DEFAULT_TOOL_CONFIG = {
   dalle: {
     autoGenerate: false,
   },
 };
-
 const DEFAULT_SYNC_CONFIG: GlobalSyncSettings = {
   webrtc: { enabled: false },
 };
 
+export const USER_CONFIG: GlobalUserConfig = {
+  fontSize: 14,
+  password: ''
+};
 export const DEFAULT_SETTINGS: GlobalSettings = {
   defaultAgent: DEFAULT_AGENT,
   languageModel: DEFAULT_LLM_CONFIG,
   sync: DEFAULT_SYNC_CONFIG,
   tool: DEFAULT_TOOL_CONFIG,
   tts: DEFAULT_TTS_CONFIG,
+  user: USER_CONFIG,
   ...DEFAULT_BASE_SETTINGS,
 };

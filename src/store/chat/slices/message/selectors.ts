@@ -1,7 +1,7 @@
 import { LobePluginType } from '@lobehub/chat-plugin-sdk';
 import { t } from 'i18next';
 
-import { DEFAULT_INBOX_AVATAR, DEFAULT_USER_AVATAR } from '@/const/meta';
+import { DEFAULT_INBOX_AVATAR, USER_AVATAR_URL } from '@/const/meta';
 import { INBOX_SESSION_ID } from '@/const/session';
 import { useGlobalStore } from '@/store/global';
 import { commonSelectors } from '@/store/global/selectors';
@@ -18,7 +18,7 @@ const getMeta = (message: ChatMessage) => {
   switch (message.role) {
     case 'user': {
       return {
-        avatar: commonSelectors.userAvatar(useGlobalStore.getState()) || DEFAULT_USER_AVATAR,
+        avatar: commonSelectors.userAvatar(useGlobalStore.getState()) || USER_AVATAR_URL,
       };
     }
 

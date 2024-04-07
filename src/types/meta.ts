@@ -36,3 +36,20 @@ export interface BaseDataModel {
   updateAt?: number;
   updatedAt: number;
 }
+
+export const UserMetaDataSchema = z.object({
+  /**
+   * 角色头像
+   */
+  avatar: z.string().optional(),
+  /**
+   *  背景色
+   */
+  description: z.string().optional(),
+  /**
+   * 名称
+   */
+  title: z.string().optional(),
+});
+
+export type UserMetaData = z.infer<typeof UserMetaDataSchema>;

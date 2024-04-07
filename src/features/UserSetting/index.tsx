@@ -1,18 +1,17 @@
-import { memo } from 'react';
 
-import AgentMeta from './AgentMeta';
-import StoreUpdater, { StoreUpdaterProps } from './StoreUpdater';
+import { memo } from 'react';
+import UserInfo from './UserInfo';
+import UserMember from './UserMember';
 import { Provider, createStore } from './store';
 
-type USerSettingsProps = StoreUpdaterProps;
-
-const UserSetting = memo<USerSettingsProps>((props) => {
+const UserSetting = memo(() => {
   return (
     <Provider createStore={createStore}>
-      <StoreUpdater {...props} />
-      <AgentMeta />
-    </Provider>
+    <UserInfo />
+    <UserMember />
+  </Provider>
   );
 });
 
 export default UserSetting;
+

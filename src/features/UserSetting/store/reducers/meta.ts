@@ -1,12 +1,12 @@
 import { produce } from 'immer';
 
-import { DEFAULT_AGENT_META } from '@/const/meta';
-import { MetaData } from '@/types/meta';
+import { USER_META } from '@/const/meta';
+import { UserMetaData } from '@/types/meta';
 import { merge } from '@/utils/merge';
 
-export type MetaDataDispatch = { type: 'update'; value: Partial<MetaData> } | { type: 'reset' };
+export type MetaDataDispatch = { type: 'update'; value: Partial<UserMetaData> } | { type: 'reset' };
 
-export const metaDataReducer = (state: MetaData, payload: MetaDataDispatch): MetaData => {
+export const metaDataReducer = (state: UserMetaData, payload: MetaDataDispatch): UserMetaData => {
   switch (payload.type) {
     case 'update': {
       return produce(state, (draftState) => {
@@ -15,7 +15,7 @@ export const metaDataReducer = (state: MetaData, payload: MetaDataDispatch): Met
     }
 
     case 'reset': {
-      return DEFAULT_AGENT_META;
+      return USER_META;
     }
   }
 };

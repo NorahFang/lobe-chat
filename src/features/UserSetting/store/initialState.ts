@@ -1,28 +1,30 @@
-import { DEFAULT_AGENT_META } from '@/const/meta';
-import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
-import { LobeAgentConfig } from '@/types/agent';
-import { MetaData } from '@/types/meta';
 
+import { USER_CONFIG } from '@/const/settings';
+import { GlobalUserConfig } from '@/types/settings/user';
 export interface State {
-  autocompleteLoading: SessionLoadingState;
-  config: LobeAgentConfig;
-  id?: string;
-  meta: MetaData;
+  config: GlobalUserConfig;
 
-  onConfigChange?: (config: LobeAgentConfig) => void;
-  onMetaChange?: (meta: MetaData) => void;
+  onConfigChange?: (config: GlobalUserConfig) => void;
 }
-export type SessionLoadingState = Record<Partial<keyof MetaData>, boolean>;
-
 export const initialState: State = {
-  // loading 中间态
-  autocompleteLoading: {
-    avatar: false,
-    backgroundColor: false,
-    description: false,
-    tags: false,
-    title: false,
-  },
-  config: DEFAULT_AGENT_CONFIG,
-  meta: DEFAULT_AGENT_META,
+  config: USER_CONFIG,
 };
+
+
+
+
+// import { USER_CONFIG } from '@/const/settings';
+// import { UserMetaData} from '@/types/meta';
+// import { GlobalUserConfig } from '@/types/settings/user';
+
+// export interface State {
+//   meta: UserMetaData;
+//   config: GlobalUserConfig;
+
+//   onConfigChange?: () => void;
+// }
+// export type SessionUserState = Record<Partial, boolean>;
+
+// export const State = {
+//   config: USER_CONFIG
+// };
